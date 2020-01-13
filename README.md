@@ -19,5 +19,13 @@ cargo build --target=wasm32-unknown-unknown
 ### wasm-bindgen
 
 ```bash
-wasm-bindgen target/wasm32-unknown-unknown/debug/wasm_module_with_rust.wasm --out-dir .
+wasm-bindgen target/wasm32-unknown-unknown/debug/wasm_module_with_rust.wasm --out-dir lib
+```
+
+### [expand](https://github.com/dtolnay/cargo-expand)
+
+逆コンパイル
+
+```bash
+cargo expand --target=wasm32-unknown-unknown > expanded.rs
 ```
